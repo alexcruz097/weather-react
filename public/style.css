@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* styles that are similar between diffrent componets */
+.links,
+.form,
+.current-weather,
+.location-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.current-weather,
+.location-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* App */
+.weather-app {
+    width: 90%;
+    margin: auto;
+}
+
+/* Header.jsx styles */
+.main-nav {
+    min-width: 100%;
+    padding: 3rem 0rem;
+}
+
+.links {
+
+    justify-content: space-between;
+}
+
+.logo-name,
+.title {
+    font-size: 18px;
+}
+
+.weather-icon {
+    font-size: 25px;
+
+}
+
+.logo-name,
+.weather-icon,
+.title {
+    list-style-type: none;
+}
+
+/* InputData styles */
+
+.form {
+    justify-content: center;
+}
+
+.city-input {
+    width: 50%;
+}
+
+.submit-btn {
+    width: 20%;
+}
+
+.city-input,
+.submit-btn {
+    height: 2.5rem;
+
+}
+
+/* CityDate  */
+.location-container {
+    margin: 22px 0px;
+}
+
+.city {
+    font-size: 42px;
+}
+
+.date {
+    font-size: 22px;
+}
+
+/* Weather  */
+.current-weather {
+    margin: 12px 0px;
+}
+
+.current-degree {
+    font-size: 45px;
+}
+
+.feels-degree {
+    font-size: 25px;
+}
+
+.weather-type {
+    font-size: 22px;
+}
