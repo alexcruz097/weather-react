@@ -22,7 +22,7 @@ function App() {
     //set the current city from the input when the button is cliked
     setCurrentCity(cityInput);
     return fetch(
-      `http://api.weatherapi.com/v1/current.json?key=0ba02e1aa5bf4ccd8de35307203107&q=${cityInput}`
+      `https://api.weatherapi.com/v1/current.json?key=0ba02e1aa5bf4ccd8de35307203107&q=${cityInput}`
     )
       .then((response) => response.json())
       .then((data) => {
