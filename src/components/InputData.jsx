@@ -6,7 +6,6 @@ function InputData(props) {
   //  get the current city from the input
   function getCurrentCity(event) {
     setCityInput(event.target.value);
-
   }
 
   return (

@@ -10,7 +10,6 @@ function Weather(props) {
         <span>
           {props.weather}
           {clicked ? "\u00b0" : null}
-         
         </span>{" "}
       </p>
       <p className="feels-degree">
@@ -19,7 +18,6 @@ function Weather(props) {
           {props.feelsLike} {clicked ? "\u00b0" : null}
         </span>
       </p>
-     
     </div>
   );
 }

@@ -10,12 +10,10 @@ function App() {
   const [currentWeather, setCurrrentWeather] = useState();
   const [currentIcon, setCurrentIcon] = useState();
   const [weatherCondition, setWeatherCondition] = useState();
-// this variable will take care if the button has been cliked to show the icons
+  // this variable will take care if the button has been cliked to show the icons
   const [isButtonClick, setIsButtonClick] = useState(false);
   // get current date from the city
   const [date, setDate] = useState();
-
-  
 
   //function to fetch the api
   const getWeather = (cityInput) => {
@@ -58,7 +56,6 @@ function App() {
         weather={currentWeather}
         feelsLike={feelsLike}
         buttonClicked={isButtonClick}
-
       />
     </div>
   );
