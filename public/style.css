@@ -5,6 +5,7 @@
 }
 
 body {
+    margin: auto;
     max-width: 900px;
     background-color: #eeeeee;
     background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
@@ -61,6 +62,10 @@ body {
 
 }
 
+.links li p {
+    text-align: center;
+}
+
 .logo-name,
 .title {
     font-size: 25px;
@@ -70,7 +75,27 @@ body {
     width: 100px;
 }
 
-.links{
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes spinHorizontal {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.links {
     list-style-type: none;
 }
 
@@ -83,7 +108,8 @@ body {
 
 .city-input {
     width: 50%;
-
+    border-radius: 10%;
+    border: .5px solid black;
 }
 
 
@@ -91,7 +117,13 @@ body {
     width: 20%;
     color: #222831;
     background-color: #32e0c4;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all .4s;
+}
 
+.submit-btn:hover {
+    background-color: gray;
 }
 
 .city-input,

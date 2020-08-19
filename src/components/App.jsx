@@ -50,15 +50,15 @@ function App() {
 
   return (
     <div className="weather-app">
-      <Header icon={currentIcon} />
+      <Header icon={currentIcon} weatherCondition={weatherCondition} />
       <InputData API={getWeather} />
-      <CityDate city={currentCity} date={date} />
-    
+      <CityDate city={currentCity} date={date} buttonClicked={isButtonClick} />
+
       <Weather
         weather={currentWeather}
         feelsLike={feelsLike}
-        weatherCondition={weatherCondition}
         buttonClicked={isButtonClick}
+
       />
     </div>
   );
