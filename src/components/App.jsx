@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import InputData from "./InputData.jsx";
 import CityDate from "./CityDate.jsx";
 import Weather from "./Weather.jsx";
@@ -10,12 +10,17 @@ function App() {
   const [currentWeather, setCurrrentWeather] = useState();
   const [currentIcon, setCurrentIcon] = useState();
   const [weatherCondition, setWeatherCondition] = useState();
-
+// this variable will take care if the button has been cliked to show the icons
+  const [isButtonClick, setIsButtonClick] = useState(false);
   // get current date from the city
   const [date, setDate] = useState();
 
+  
+
   //function to fetch the api
   const getWeather = (cityInput) => {
+    // Change the state of the button
+    setIsButtonClick(true);
     //set the current city from the input when the button is cliked
     setCurrentCity(cityInput);
     return fetch(
@@ -48,10 +53,12 @@ function App() {
       <Header icon={currentIcon} />
       <InputData API={getWeather} />
       <CityDate city={currentCity} date={date} />
+    
       <Weather
         weather={currentWeather}
         feelsLike={feelsLike}
         weatherCondition={weatherCondition}
+        buttonClicked={isButtonClick}
       />
     </div>
   );
