@@ -26,7 +26,7 @@ function InputData(props) {
         className="submit-btn"
         type="submit"
       >
-        Enter
+        Enter City
       </button>
     </form>
   );
