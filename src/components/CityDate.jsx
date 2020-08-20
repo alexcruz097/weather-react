@@ -5,9 +5,9 @@ function CityDate(props) {
   const isClicked = props.buttonClicked;
   return (
     <div className="location-container">
-      {isClicked ? <LocationCityIcon fontSize="large" /> : null}{" "}
+      <span className="city-icon">{isClicked ? <LocationCityIcon fontSize="small" /> : null}</span> 
       <h1 className="city">{props.city}</h1>
-      {isClicked ? <UpdateIcon fontSize="large" /> : null}{" "}
+      <span className="time-icon">{isClicked ? <UpdateIcon fontSize="small" /> : null}</span>
       <p className="date">{props.date}</p>
     </div>
   );

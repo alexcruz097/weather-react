@@ -22,7 +22,7 @@ function App() {
     //set the current city from the input when the button is cliked
     setCurrentCity(cityInput);
     return fetch(
-      `https://api.weatherapi.com/v1/current.json?key=2581791d99f34ca0bc260840202008&q=${cityInput}`
+      `https://api.weatherapi.com/v1/forecast.json?key=2581791d99f34ca0bc260840202008&q=${cityInput}&days=7`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -57,6 +57,7 @@ function App() {
       <InputData API={getWeather} />
       <CityDate city={currentCity} date={date} buttonClicked={isButtonClick} />
       <Weather
+        buttonClicked={isButtonClick}
         weather={currentWeather}
         feelsLike={feelsLike}
       />
