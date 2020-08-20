@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// import LocationCityIcon from @material-ui/icons/LocationCity";
+
 function Weather(props) {
   const clicked = props.buttonClicked;
 

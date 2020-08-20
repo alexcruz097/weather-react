@@ -3,7 +3,7 @@ import InputData from "./InputData.jsx";
 import CityDate from "./CityDate.jsx";
 import Weather from "./Weather.jsx";
 import Header from "./Header.jsx";
-
+import IconWeatherType from "./IconWeatherType";
 function App() {
   const [currentCity, setCurrentCity] = useState("");
   const [feelsLike, setFeelsLike] = useState();
@@ -22,7 +22,7 @@ function App() {
     //set the current city from the input when the button is cliked
     setCurrentCity(cityInput);
     return fetch(
-      `https://api.weatherapi.com/v1/current.json?key=0ba02e1aa5bf4ccd8de35307203107&q=${cityInput}`
+      `https://api.weatherapi.com/v1/current.json?key=2581791d99f34ca0bc260840202008&q=${cityInput}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -48,14 +48,17 @@ function App() {
 
   return (
     <div className="weather-app">
-      <Header icon={currentIcon} weatherCondition={weatherCondition} />
+      <Header  />
+      <IconWeatherType 
+        icon={currentIcon}
+        weatherCondition={weatherCondition}
+        buttonClicked={isButtonClick}
+      />
       <InputData API={getWeather} />
       <CityDate city={currentCity} date={date} buttonClicked={isButtonClick} />
-
       <Weather
         weather={currentWeather}
         feelsLike={feelsLike}
-        buttonClicked={isButtonClick}
       />
     </div>
   );

@@ -26,7 +26,7 @@ body {
 
 /* Font style for Lato */
 
-/* styles that are similar between diffrent componets */
+/* styles that are similar in diffrent componets */
 .links,
 .form,
 .current-weather,
@@ -36,7 +36,8 @@ body {
 }
 
 .current-weather,
-.location-container {
+.location-container,
+.weather-type {
     flex-direction: column;
     align-items: center;
 }
@@ -50,7 +51,7 @@ body {
 /* Header.jsx styles */
 .main-nav {
     min-width: 100%;
-    padding: 2rem 0rem;
+    padding-top: 2rem;
 }
 
 .links {
@@ -59,17 +60,26 @@ body {
     align-items: center;
 }
 
-.links li p {
-    text-align: center;
-}
-
 .logo-name,
 .title {
-    font-size: 25px;
+    font-size: 20px;
+}
+
+/* IconWeatherType styles */
+.weather-type {
+    display: flex;
+    align-items: center;
 }
 
 .weather-icon {
-    width: 100px;
+    width: 90px;
+
+}
+
+.weather-condition {
+    font-size: 20px;
+    height: 30px;
+    text-align: center;
 }
 
 @keyframes rotation {
@@ -113,13 +123,13 @@ body {
 }
 
 .city-input {
-    width: 50%;
+    width: 65%;
     border-radius: 10%;
     border: 0.5px solid black;
 }
 
 .submit-btn {
-    width: 20%;
+    width: 25%;
     color: #222831;
     background-color: #32e0c4;
     border-radius: 10%;
