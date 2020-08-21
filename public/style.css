@@ -138,6 +138,7 @@ body {
 
 .submit-btn:hover {
     background-color: gray;
+    color: white;
 }
 
 .city-input,
@@ -177,7 +178,7 @@ body {
 }
 
 .date {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 /* Weather  */
@@ -202,5 +203,23 @@ body {
 }
 
 .feelsLike-text {
-    font-size: 15px;
+    font-size: 12px;
+}
+
+/* Forecast.jsx style */
+.forecast-tile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    position: absolute;
+
+    bottom: 20%;
+}
+
+.day-tile {
+    border: 1px solid black;
+}
+
+.tile-date {
+    font-size: 12px;
 }

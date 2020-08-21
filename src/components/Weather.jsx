@@ -3,7 +3,6 @@ import React from "react";
 
 function Weather(props) {
   const clicked = props.buttonClicked;
-console.log(clicked)
   return (
     <div className="current-weather">
       <p className="current-degree">
