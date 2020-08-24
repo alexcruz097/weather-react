@@ -10,7 +10,7 @@ function Header(props) {
         <li className="title">Weather App</li>
       </ul>
     </nav>
-  );
+  )
 }
 
 export default Header;

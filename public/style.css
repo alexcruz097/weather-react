@@ -7,8 +7,12 @@
 body {
     margin: auto;
     max-width: 900px;
-    background-color: #eeeeee;
-    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    background: #005AA7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFFDE4, #005AA7)fixed;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFFDE4, #005AA7)fixed;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* font style Merriweather and color*/
@@ -19,9 +23,10 @@ body {
 }
 
 .location-container,
-.current-weather {
+.current-weather,
+.day-tile {
     font-family: "Lato", sans-serif;
-    color: #222831;
+    color: #272622
 }
 
 /* Font style for Lato */
@@ -51,12 +56,18 @@ body {
 .main-nav {
     min-width: 100%;
     padding-top: 2rem;
+
 }
 
 .links {
-    color: #393e46;
+    color: rgb(255, 166, 0);
     justify-content: space-between;
     align-items: center;
+}
+
+.logo-name {
+    color: rgb(255, 251, 245);
+    ;
 }
 
 .logo-name,
@@ -72,13 +83,15 @@ body {
 
 .weather-icon {
     width: 90px;
-
+  
 }
 
 .weather-condition {
     font-size: 20px;
     height: 30px;
     text-align: center;
+    color: rgb(255, 166, 0);
+    ;
 }
 
 @keyframes rotation {
@@ -124,16 +137,19 @@ body {
 .city-input {
     width: 65%;
     border-radius: 10%;
-    border: 0.5px solid black;
+    border: none;
+    outline: none;
 }
 
 .submit-btn {
     width: 25%;
-    color: #222831;
-    background-color: #32e0c4;
+    color: rgb(252, 245, 236);
+    font-weight: 600;
+    background-color: #f69537;
     border-radius: 10%;
     cursor: pointer;
     transition: all 0.4s;
+    outline: none;
 }
 
 .submit-btn:hover {
@@ -212,14 +228,34 @@ body {
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
     position: absolute;
+    bottom: 50px;
 
-    bottom: 20%;
 }
 
 .day-tile {
-    border: 1px solid black;
+    border-right: .1px solid #393e46;
+    line-height: 1.3;
+    text-align: center;
 }
 
+.weather-high {
+    color: rgb(247, 83, 110);
+}
+
+.weather-low {
+    color: #359ff0;
+}
+
+.weather-high,
+.weather-low,
 .tile-date {
-    font-size: 12px;
+    font-size: 15px;
+}
+
+.rain-percentage,
+.snow-percentage,
+.sun-rise,
+.sun-set {
+    font-size: 10px;
+    color: #272622;
 }
