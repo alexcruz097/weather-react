@@ -240,8 +240,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
-    position: static;
-    bottom: 50px;
+   
+    position: fixed;
+bottom:3.8rem;
 
 }
 
@@ -302,7 +303,7 @@ body {
     /* IconWeatherType jsx */
     .weather-icon {
 
-     width: 150px;
+        width: 150px;
 
     }
 
