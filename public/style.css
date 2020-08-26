@@ -15,6 +15,7 @@ body {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #FFFDE4, #005AA7)fixed;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /* font style Merriweather and color*/
@@ -240,9 +241,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
-   
-    position: fixed;
-bottom:3.8rem;
+    position: relative;
+top: 7.5rem;
 
 }
 
