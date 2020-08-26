@@ -242,7 +242,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
     position: relative;
-top: 7.5rem;
+top: 13rem;
+margin: auto;
 
 }
 
