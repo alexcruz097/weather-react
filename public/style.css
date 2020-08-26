@@ -8,7 +8,7 @@
 body {
     margin: auto;
 
-    max-width: 900px;
+    max-width: 1300px;
     background: #005AA7;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #FFFDE4, #005AA7)fixed;
@@ -240,7 +240,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
-    position: absolute;
+    position: static;
     bottom: 50px;
 
 }
@@ -276,4 +276,118 @@ body {
 .snow-percentage {
     font-size: 12px;
 
+}
+
+/* media queries: 500px and up*/
+@media(min-width: 500px) {
+
+    /* Forecast.jsx */
+    .forecast-tile {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        top: 200px;
+    }
+}
+
+/* media queries: 700px and up*/
+@media(min-width: 700px) {
+
+    /* Header  jsx*/
+    .logo-name,
+    .title {
+        font-size: 25px;
+    }
+
+    /* IconWeatherType jsx */
+    .weather-icon {
+
+     width: 150px;
+
+    }
+
+    /* CityDate  Style*/
+
+    .city-icon {
+        top: 12px;
+    }
+
+    .city {
+        font-size: 30px;
+    }
+
+    .date {
+        font-size: 17px;
+    }
+
+    /* Weather jsx*/
+    .current-degree {
+        font-size: 35px;
+    }
+
+    .feels-degree {
+        font-size: 30px;
+    }
+
+    .weather-type {
+        font-size: 27px;
+    }
+
+    .feelsLike-text {
+        font-size: 17px;
+    }
+
+    /* Forecast.jsx style */
+    .forecast-tile {
+        width: 100%;
+    }
+
+    .weather-high,
+    .weather-low,
+    .tile-date {
+        font-size: 20px;
+    }
+
+
+    .sun-rise,
+    .sun-set {
+        font-size: 15px;
+
+    }
+
+    .rain-percentage,
+    .snow-percentage {
+        font-size: 17px;
+
+    }
+}
+
+@media(min-width: 1300px) {
+
+    /* CityDate  Style*/
+    .location-container {
+
+        left: 12%;
+    }
+
+    /* weather jsx */
+    .current-weather {
+
+        right: 12%;
+    }
+}
+
+@media(min-width: 1500px) {
+
+    /* CityDate  Style*/
+    .location-container {
+        left: 16%;
+    }
+
+    /* weather jsx */
+    .current-weather {
+
+
+        right: 16%;
+    }
 }
