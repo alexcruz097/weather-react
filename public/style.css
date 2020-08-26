@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
     margin: auto;
+
     max-width: 900px;
     background: #005AA7;
     /* fallback for old browsers */
@@ -26,7 +28,7 @@ body {
 .current-weather,
 .day-tile {
     font-family: "Lato", sans-serif;
-    color: #272622
+    color: rgb(63, 41, 0);
 }
 
 /* Font style for Lato */
@@ -66,7 +68,7 @@ body {
 }
 
 .logo-name {
-    color: rgb(255, 251, 245);
+    color: rgb(63, 41, 0);
     ;
 }
 
@@ -83,7 +85,7 @@ body {
 
 .weather-icon {
     width: 90px;
-  
+
 }
 
 .weather-condition {
@@ -139,6 +141,13 @@ body {
     border-radius: 10%;
     border: none;
     outline: none;
+    transition: all .7s;
+}
+
+.city-input:focus {
+    border-bottom: 4px solid orange;
+
+
 }
 
 .submit-btn {
@@ -148,13 +157,15 @@ body {
     background-color: #f69537;
     border-radius: 10%;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: all 0.3s;
     outline: none;
+
 }
 
 .submit-btn:hover {
-    background-color: gray;
-    color: white;
+    background-color: #fd7f00;
+    color: rgb(0, 140, 255);
+
 }
 
 .city-input,
@@ -199,6 +210,7 @@ body {
 
 /* Weather  */
 .current-weather {
+
     margin: 22px 0px;
     line-height: 1.3;
     position: absolute;
@@ -219,6 +231,7 @@ body {
 }
 
 .feelsLike-text {
+    color: rgb(255, 196, 0);
     font-size: 12px;
 }
 
@@ -252,10 +265,15 @@ body {
     font-size: 15px;
 }
 
-.rain-percentage,
-.snow-percentage,
+
 .sun-rise,
 .sun-set {
     font-size: 10px;
     color: #272622;
+}
+
+.rain-percentage,
+.snow-percentage {
+    font-size: 12px;
+
 }

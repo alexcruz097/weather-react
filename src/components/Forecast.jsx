@@ -7,7 +7,8 @@ function Forecast(props)
 {
     const fontSize = {
         fontSize: 10,
-        color: "blue"
+        color: "blue",
+  
     }
     
     return (
@@ -16,7 +17,7 @@ function Forecast(props)
             <img src={props.icon} alt="Logo of weather" />
             <p><span className="weather-high">{props.high}&deg;</span>/<span className="weather-low">{props.low}&deg;</span></p>
             <p><ArrowUpwardIcon style={fontSize} /><span className="sun-rise">{props.rise}</span><ArrowDownwardIcon style={fontSize} /><span className="sun-set">{props.set}</span></p>
-            <p><InvertColorsIcon style={fontSize} /><span className="rain-percentage">{props.rain}%</span><AcUnitIcon style={{fontSize: 10  , color: "skyBlue"}} /><span className="snow-percentage">{props.snow}%</span></p>
+            <p><InvertColorsIcon style={fontSize} /><span className="rain-percentage">{props.rain}%</span><AcUnitIcon style={{fontSize: 10  , color: "skyBlue", marginLeft:12}} /><span className="snow-percentage">{props.snow}%</span></p>
         </div>
 )
 }
